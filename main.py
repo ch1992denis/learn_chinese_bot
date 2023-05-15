@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 TOKEN = os.getenv('TOKEN')
-bot = TOKEN
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start']) #стартовая команда
 def start(message):
